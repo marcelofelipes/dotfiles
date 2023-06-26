@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 
 # Outras configurações e plugins
 
-plugins=(git zsh-nvm)
+plugins=(git zsh-nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
