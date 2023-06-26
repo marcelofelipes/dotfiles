@@ -17,9 +17,6 @@ esac
 export ZSH="$HOME/.oh-my-zsh"
 
 # Personal Aliases
-alias dev="cd ~/dev"
-alias dscli="yarn --cwd ~/dev/devsoutinho/platform dscli"
-alias jarvis="yarn --cwd ~/dev/devsoutinho/skynex/_products/jarvis.mariosouto.com dev"
 alias dotfiles="cd ~/.dotfiles && brew bundle dump --force && git add . && git commit -m 'update' && git push && cd ~"
 
 # Carregar variáveis de ambiente do arquivo .env, se existir
