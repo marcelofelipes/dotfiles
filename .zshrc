@@ -36,7 +36,19 @@ ZSH_THEME="agnoster"
 
 # Outras configurações e plugins
 
-plugins=(git zsh-nvm zsh-autosuggestions)
+plugins=(git zsh-nvm zsh-autosuggestions dotenv)
+
+# Alias para instalar o zplug
+alias install-zplug="curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
+
+# Configuração do zplug
+source ~/.dotfiles/zplug/init.zsh
+
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting"
+
+# Carregar os plugins
+zplug load
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,3 +67,5 @@ case "$(uname -s)" in
 esac
 
 # Configurações finais
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
