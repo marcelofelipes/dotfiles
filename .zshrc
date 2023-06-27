@@ -29,7 +29,7 @@ alias load-env="source ~/.zshrc"
 # =================
 
 # Definir o tema a ser carregado
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Lista de temas para escolher aleatoriamente
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
