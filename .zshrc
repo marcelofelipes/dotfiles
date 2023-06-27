@@ -36,19 +36,16 @@ ZSH_THEME="agnoster"
 
 # Outras configurações e plugins
 
-plugins=(git zsh-nvm zsh-autosuggestions dotenv)
+plugins=(git zsh-nvm zsh-autosuggestions)
 
-# Alias para instalar o zplug
-alias install-zplug="curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
+# Configuração do ZPLUG_HOME
+ZPLUG_HOME=~/.dotfiles/.zplug
 
-# Configuração do zplug
-source ~/.dotfiles/zplug/init.zsh
-
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting"
-
-# Carregar os plugins
-zplug load
+# Instalar o zplug se não estiver instalado
+if [ ! -d "$ZPLUG_HOME" ]; then
+    alias install-zplug="git clone https://github.com/zplug/zplug $ZPLUG_HOME"
+    install-zplug
+fi
 
 source $ZSH/oh-my-zsh.sh
 
